@@ -1,0 +1,75 @@
+:root {
+  --color-primary: #c69963;
+  --color-primary-dark: #b28451;
+
+  --color-secondary: #101d2c;
+
+  --color-grey-light-1: #f9f7f6;
+  --color-grey-light-2: #aaa;
+
+  --color-grey-dark-1: #54483a;
+  --color-grey-dark-2: #6d5d4b;
+  --gradient-opacity: 0.5;
+
+  --font-primary: "Nunito", sans-serif;
+  --font-display: "Josefin Sans", sans-serif;
+
+  --background-image: url(../img/back.jpg);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+.story__pictures {
+  background-image: linear-gradient(
+      rgba(var(--color-primary), var(--gradient-opacity)),
+      rgba(var(--color-primary), var(--gradient-opacity))
+    ),
+    var(--background-image);
+  grid-column: full-start/col-end 4;
+
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+}
+
+.story__img--1 {
+  width: 100%;
+  grid-row: 2/6;
+  grid-column: 2/6;
+  box-shadow: 0 2rem 5rem rgba(#000, 0.1);
+}
+.story__img--2 {
+  width: 115%;
+  grid-row: 4/6;
+  grid-column: 4/7;
+  z-index: 20;
+  box-shadow: 0 2rem 5rem rgba(#000, 0.2);
+}
+
+.story__content {
+  background-color: var(--color-grey-light-1);
+  grid-column: col-start 5 / full-end;
+  padding: 6rem 8vw;
+
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; */
+
+  display: grid;
+  justify-content: center;
+  justify-items: start;
+}
+
+.story__text {
+  font-style: italic;
+  font-size: 1.5rem;
+  margin-bottom: 4rem;
+}
