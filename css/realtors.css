@@ -14,15 +14,30 @@
   --font-display: "Josefin Sans", sans-serif;
 }
 
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
-
 .realtors {
   background-color: var(--color-secondary);
   grid-column: col-start 7 / full-end;
+  padding: 3rem;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  row-gap: 2rem;
+}
+.realtors__list {
+  display: grid;
+  grid-template-columns: min-content max-content;
+  column-gap: 2rem;
+  row-gap: 5vh;
+  align-items: center;
+}
+.realtors__img {
+  width: 7rem;
+  border-radius: 50%;
+  display: block;
+}
+.realtors__sold {
+  text-transform: uppercase;
+  color: var(--color-grey-light-2);
+  margin-top: -3px;
 }

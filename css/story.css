@@ -1,5 +1,5 @@
 :root {
-  --color-primary: #c69963;
+  --color-primary: rgb(198, 153, 99);
   --color-primary-dark: #b28451;
 
   --color-secondary: #101d2c;
@@ -27,8 +27,8 @@
 
 .story__pictures {
   background-image: linear-gradient(
-      rgba(var(--color-primary), var(--gradient-opacity)),
-      rgba(var(--color-primary), var(--gradient-opacity))
+      rgba(198, 153, 99, var(--gradient-opacity)),
+      rgba(198, 153, 99, var(--gradient-opacity))
     ),
     var(--background-image);
   grid-column: full-start/col-end 4;

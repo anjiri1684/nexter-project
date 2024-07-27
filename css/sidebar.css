@@ -12,6 +12,8 @@
 
   --font-primary: "Nunito", sans-serif;
   --font-display: "Josefin Sans", sans-serif;
+  --bp-largest: 75em;
+  --bp-large: 62.5em;
 }
 
 *,
@@ -55,4 +57,26 @@
 }
 .nav-btn::after {
   transform: translateY(1.3rem);
+}
+
+@media screen and (max-width: var(--bp-large)) {
+  .sidebar {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+@media screen and (max-width: var(--bp-large)) {
+  .nav-btn::before,
+  .nav-btn::after {
+    margin-top: 0;
+    margin-right: 3rem;
+  }
+  .nav-btn::before {
+    transform: translateY(2rem);
+  }
+  .nav-btn::after {
+    transform: translateY(0);
+  }
 }
